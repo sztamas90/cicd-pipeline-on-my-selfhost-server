@@ -127,6 +127,7 @@ jobs:
             echo "Starting new container..."
             docker run -d \
               --name my-service \
+              --network shared_net \
               -p 8001:8080 \
               --restart unless-stopped \
               "$IMAGE"
